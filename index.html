@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Home - Kalakunj Music Academy</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="img/Kalakunj_Logo.png">
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link href="css/element.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet">
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<!-- Embedded CSS for mobile responsiveness and WhatsApp button styling -->
+<style>
+	#center {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		padding-top: 180px;
+		padding-bottom: 250px;
+		height: 800px;
+	}
+
+	@media (max-width: 1322) {
+		#center {
+			height: 1300px;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		#center {
+			height: 1000px;
+		}
+	}
+
+
+	@media (max-width: 768px) {
+		#center {
+			height: 1000px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		#center {
+			height: 1150px;
+			padding-top: 50px;
+		}
+	}
+
+	.main {
+		width: 100%;
+		padding: 0 40px;
+		/* Increase padding on the sides */
+	}
+
+	/* Base layout for desktop */
+	.icon-grid {
+		margin-top: 40px;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 20px;
+		/* Reduced gap between icon items */
+		justify-content: center;
+		padding: 0 210px;
+		/* Add padding to the grid for spacing on the sides */
+	}
+
+	/* Adjust layout for tablets (max-width: 768px) */
+	@media (max-width: 1000px) {
+		.icon-grid {
+			grid-template-columns: repeat(3, 1fr);
+			padding: 0 20px;
+
+		}
+	}
+
+	/* Adjust layout for mobile (max-width: 480px) */
+	@media (max-width: 570px) {
+		.icon-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	/* Ensure the icon items maintain consistent styling */
+	.icon-item {
+		color: #a4b4dc;
+		background-color: rgb(34, 33, 43);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: auto;
+		min-width: 150px;
+		/* Adjusted to fill full width */
+		height: 50px;
+		font-size: 18px;
+		text-align: center;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		animation: gentle-glow 2s infinite ease-in-out;
+		padding: 10px;
+		border-radius: 10px;
+	}
+
+	@media (max-width: 730px) {
+		.icon-item {
+			width: 150px;
+		}
+	}
+
+	/* Adjust layout for mobile (max-width: 480px) */
+	@media (max-width: 480px) {
+		.icon-item {
+			width: 130px;
+
+		}
+	}
+
+	/* Adjust the margin for icons to create proper spacing between icon and text */
+	.icon-item i {
+		margin-right: 10px;
+		/* Adjust the gap between icon and text */
+		font-size: 20px;
+		/* Ensure the icon size is consistent */
+		color: #a4b4dc;
+		/* Keep the icon color the same */
+	}
+
+	/* Add a transition effect to smooth out hover effects */
+	.icon-item:hover {
+		box-shadow: 0 0 15px #a4b4dc, 0 0 30px #a4b4dc;
+	}
+
+
+	/* WhatsApp floating button */
+	.whatsapp-float {
+		position: fixed;
+		width: 60px;
+		height: 60px;
+		bottom: 20px;
+		left: 20px;
+		background-color: #25D366;
+		color: #FFF;
+		border-radius: 50px;
+		text-align: center;
+		font-size: 30px;
+		box-shadow: 2px 2px 3px #999;
+		z-index: 1000;
+	}
+
+	.whatsapp-float .my-float {
+		margin-top: 16px;
+	}
+
+	/* Gentle glowing effect for icon and text */
+	@keyframes gentle-glow {
+		0% {
+			box-shadow: 0 0 5px #a4b4dc, 0 0 10px #a4b4dc;
+		}
+
+		50% {
+			box-shadow: 0 0 10px #a4b4dc, 0 0 15px #a4b4dc;
+		}
+
+		100% {
+			box-shadow: 0 0 5px #a4b4dc, 0 0 10px #a4b4dc;
+		}
+	}
+
+
+
+	.text {
+		font-size: 18px;
+		color: #adacac;
+		margin-top: 15px;
+
+	}
+
+
+	/* Icon item styling with hover and click animations */
+	.icon-item {
+		cursor: pointer;
+		position: relative;
+		padding-bottom: 10px;
+		transition: transform 0.2s ease-in-out;
+		background-color: rgb(34, 33, 43);
+		color: #a4b4dc;
+		padding: 20px;
+		border-radius: 10px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	/* Hover effect on icon-item */
+	.icon-item:hover {
+		transform: scale(1.1);
+		/* Slightly enlarge the icon */
+	}
+
+	/* Click effect animation on icon-item */
+	.icon-item:active {
+		transform: scale(0.95);
+		/* Shrink slightly when clicked */
+	}
+
+	/* Progress bar styling */
+	.progress-bar {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 5px;
+		width: 0;
+		/* Initially set to 0 */
+		background-color: #4caf50;
+		/* Green progress color */
+		transition: width 0.1s ease;
+	}
+
+	.events_home_10 {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+	}
+
+
+	@media (max-width: 1024px) {
+		.events_home_10 {
+			display: flex;
+			flex-direction: column;
+			padding: 30px;
+		}
+
+		.events_home_10_inner {
+			display: flex;
+			justify-content: center;
+		}
+	}
+</style>
+
+<style>
+	.review-card h4 {
+		color: #333;
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	.review-stars {
+		margin-bottom: 10px;
+		color: #FFD700;
+		/* Gold color for stars */
+	}
+
+	.review-card p {
+		color: #666;
+		font-size: 14px;
+		margin-bottom: 15px;
+	}
+
+
+	.owl-carousel .item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+	}
+
+	/* Owl Carousel Navigation Styling */
+	.owl-nav {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		pointer-events: none;
+		/* Allows clicks to pass through */
+		z-index: 2;
+		/* Ensures buttons stay on top */
+	}
+
+	.owl-nav button {
+		background: none;
+		border: none;
+		font-size: 2rem;
+		pointer-events: all;
+		color: #fff;
+		/* White color for navigation icons */
+		cursor: pointer;
+	}
+
+	.owl-nav button.owl-prev {
+		position: absolute;
+		left: -50px;
+		/* Move button outside the review card area */
+		z-index: 10;
+	}
+
+	.owl-nav button.owl-next {
+		position: absolute;
+		right: -50px;
+		/* Move button outside the review card area */
+		z-index: 10;
+	}
+
+	/* Make the navigation icons white */
+	.fas.fa-chevron-left,
+	.fas.fa-chevron-right {
+		font-size: 30px;
+		color: #fff;
+		/* Set icon color to white */
+	}
+
+	/* Optional: Add hover effect to icons */
+	.owl-nav button:hover {
+		color: #f0f0f0;
+		/* Slightly lighter white on hover */
+	}
+
+	/* Responsive fix for mobile and tablet */
+	@media (max-width: 768px) {
+		.owl-nav button {
+			font-size: 1.5rem;
+			/* Decrease size for smaller screens */
+		}
+
+		.owl-nav button.owl-prev {
+			left: -25px;
+			/* Further adjust for smaller screens */
+		}
+
+		.owl-nav button.owl-next {
+			right: -25px;
+			/* Further adjust for smaller screens */
+		}
+	}
+
+	@media (max-width: 480px) {
+		.owl-nav button {
+			font-size: 1.2rem;
+			/* Even smaller size for very small screens */
+		}
+
+		.owl-nav button.owl-prev {
+			left: -15px;
+			/* Adjust for mobile view */
+		}
+
+		.owl-nav button.owl-next {
+			right: -15px;
+			/* Adjust for mobile view */
+		}
+	}
+
+	/* Review Card Styling */
+	.review-card {
+		background-color: #f9f9f9;
+		padding: 20px;
+		border: 1px solid #ddd;
+		border-radius: 10px;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		margin: 15px;
+		width: 300px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	/* Ensure navigation buttons don't overlap the reviews */
+	.owl-carousel .item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+	}
+
+
+
+	/* Custom buttons for reviews */
+	.review-buttons {
+		margin-top: 20px;
+	}
+
+	.btn-primary {
+		background-color: #007bff;
+		color: #fff;
+		padding: 10px 20px;
+		border-radius: 5px;
+		text-decoration: none;
+	}
+
+	.view-all-reviews {
+		display: inline-block;
+		margin-top: 10px;
+		color: #007bff;
+		text-decoration: none;
+	}
+
+	.view-all-reviews:hover {
+		text-decoration: underline;
+	}
+
+
+
+	.events_home h1 {
+		font-size: 2.5rem;
+		margin-bottom: 10px;
+	}
+
+	iframe {
+		border-radius: 8px;
+	}
+
+	/* Tablet view (768px and below) */
+	@media (max-width: 768px) {
+		.events_home h1 {
+			font-size: 2rem;
+		}
+
+		iframe {
+			height: 450px;
+		}
+	}
+
+	/* Mobile view (576px and below) */
+	@media (max-width: 576px) {
+		.events_home h1 {
+			font-size: 1.8rem;
+		}
+
+		iframe {
+			height: 300px;
+		}
+	}
+</style>
+
+
+
+
+<style>
+	.col-sm-8 {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		/* Adjust column size dynamically */
+		gap: 16px;
+		/* Add spacing between grid items */
+		padding: 16px;
+		/* Add padding around the grid */
+		width: 100%;
+		/* Ensure it covers the full width */
+		box-sizing: border-box;
+		/* Include padding in width calculation */
+	}
+
+	.gallery_home_inner {
+		position: relative;
+		overflow: hidden;
+		border-radius: 8px;
+		/* Optional: Add rounded corners */
+	}
+
+	.img-responsive {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		/* Ensure images cover their container without distortion */
+		display: block;
+	}
+
+	.maindiv {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	@media (max-width: 768px) {
+		.col-sm-8 {
+			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+			/* Adjust for smaller screens */
+			gap: 12px;
+			padding: 8px;
+		}
+
+		.maindiv {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+
+
+	section {
+		position: relative;
+		padding-bottom: 40px;
+		/* Adds space for the neon effect */
+	}
+
+	section:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		/* Adjust the height of the neon line */
+		background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+		/* Neon colors */
+		box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+		animation: neon 1.5s ease-in-out infinite alternate;
+	}
+
+	/* Neon glow animation */
+	@keyframes neon {
+		0% {
+			opacity: 0.8;
+			box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+		}
+
+		100% {
+			opacity: 1;
+			box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, 0 0 60px #ff00ff;
+		}
+	}
+
+
+	#google-reviews {
+		padding-top: 60px;
+		background-color: #242a37;
+		padding-bottom: 60px;
+	}
+
+	#google-reviews .container {
+		padding: 0 15px;
+	}
+
+	#google-reviews h2 {
+		color: white;
+		text-align: center;
+		padding: 40px 0;
+	}
+
+	#reviews {
+		display: flex;
+		overflow: hidden;
+		width: 100%;
+		position: relative;
+	}
+
+	#review-cards {
+		display: flex;
+		transition: transform 1s ease-in-out;
+		width: max-content;
+		gap: 20px;
+		/* Space between cards */
+	}
+
+	.review-card {
+		background-color: white;
+		color: #333;
+		padding: 20px;
+		width: 300px;
+		border-radius: 8px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		display: block;
+		/* Changed to block to ensure it grows with content */
+		height: auto;
+		/* Let content dictate the height */
+	}
+
+	.review-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.review-header h4 {
+		font-size: 18px;
+		color: #333;
+		margin: 0;
+	}
+
+	.stars {
+		color: #f4b400;
+	}
+
+	.stars i {
+		margin-right: 2px;
+	}
+
+	.review-card p {
+		font-size: 14px;
+		color: #666;
+		margin-top: 10px;
+	}
+
+	.review-card span {
+		font-size: 12px;
+		color: #aaa;
+	}
+
+	.review-buttons {
+		text-align: center;
+	}
+
+	.view-all-reviews {
+		color: #fff;
+		text-decoration: none;
+		font-size: 16px;
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+
+	.view-all-reviews:hover {
+		text-decoration: underline;
+	}
+
+	.btn-primary {
+		padding: 10px 20px;
+		background-color: #f4b400;
+		color: white;
+		border-radius: 5px;
+		text-decoration: none;
+	}
+
+	.btn-primary:hover {
+		background-color: #e0a800;
+	}
+</style>
+
+<body>
+	<section id="header" class="about_header">
+		<div id="header-container"></div>
+	</section>
+
+	<section id="center">
+		<div class="container">
+			<div class="row">
+				<div class="center clearfix">
+					<h1>EXPERT GUIDANCE<br> <span>IN CLASSICAL AND</span><br>MODERN MUSIC</h1>
+					<h4>Play Practice Perform</h4>
+					<p> We provide personalized instruction from
+						<br>
+						experienced instructors to help you master classical and
+						<br>modern music, inspiring students of all levels
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="icon-grid">
+				<!-- Guitar -->
+				<div class="icon-item" id="guitar-icon">
+					<i class="fa fa-play-circle"></i> Guitar
+					<div class="progress-bar" id="guitar-progress"></div>
+				</div>
+				<audio id="guitar-audio" src="sounds/guitar.mp3" preload="auto"></audio>
+
+				<!-- Vocal -->
+				<div class="icon-item" id="vocal-icon">
+					<i class="fa fa-play-circle"></i> Vocal
+					<div class="progress-bar" id="vocal-progress"></div>
+				</div>
+				<audio id="vocal-audio" src="sounds/vocal.mp3" preload="auto"></audio>
+
+				<!-- Violin -->
+				<div class="icon-item" id="violin-icon">
+					<i class="fa fa-play-circle"></i> Violin
+					<div class="progress-bar" id="violin-progress"></div>
+				</div>
+				<audio id="violin-audio" src="sounds/violin.mp3" preload="auto"></audio>
+
+				<!-- Tabala -->
+				<div class="icon-item" id="tabala-icon">
+					<i class="fa fa-play-circle"></i> Tabala
+					<div class="progress-bar" id="tabala-progress"></div>
+				</div>
+				<audio id="tabala-audio" src="sounds/tabla.mp3" preload="auto"></audio>
+
+				<!-- Piano -->
+				<div class="icon-item" id="piano-icon">
+					<i class="fa fa-play-circle"></i> Piano
+					<div class="progress-bar" id="piano-progress"></div>
+				</div>
+				<audio id="piano-audio" src="sounds/piano.mp3" preload="auto"></audio>
+
+				<!-- Drum -->
+				<div class="icon-item" id="drum-icon">
+					<i class="fa fa-play-circle"></i> Drum
+					<div class="progress-bar" id="drum-progress"></div>
+				</div>
+				<audio id="drum-audio" src="sounds/drum.mp3" preload="auto"></audio>
+
+				<!-- Flute -->
+				<div class="icon-item" id="flute-icon">
+					<i class="fa fa-play-circle"></i> Flute
+					<div class="progress-bar" id="flute-progress"></div>
+				</div>
+				<audio id="flute-audio" src="sounds/flute.mp3" preload="auto"></audio>
+
+				<!-- Sarangi -->
+				<div class="icon-item" id="sarangi-icon">
+					<i class="fa fa-play-circle"></i> Sarangi
+					<div class="progress-bar" id="sarangi-progress"></div>
+				</div>
+				<audio id="sarangi-audio" src="sounds/sarangi.mp3" preload="auto"></audio>
+
+				<!-- Madal -->
+				<div class="icon-item" id="madal-icon">
+					<i class="fa fa-play-circle"></i> Madal
+					<div class="progress-bar" id="madal-progress"></div>
+				</div>
+				<audio id="madal-audio" src="sounds/madal.wav" preload="auto"></audio>
+
+				<!-- Harmonium -->
+				<div class="icon-item" id="harmonium-icon">
+					<i class="fa fa-play-circle"></i> Harmonium
+					<div class="progress-bar" id="harmonium-progress"></div>
+				</div>
+				<audio id="harmonium-audio" src="sounds/harmonium.wav" preload="auto"></audio>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="events_home">
+		<div class="container">
+			<div class="row">
+				<div class="events_home text-center clearfix">
+					<h1>OUR COURSES</h1>
+					<hr>
+				</div>
+				<div class="events_home_1 clearfix">
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="Courses.html">
+										<img src="img/2.jpg" alt="img05" />
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h3><a href="Courses.html"> Vocal</a></h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="Courses.html">
+										<img src="img/3.jpg" alt="img05" />
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h3><a href="Courses.html">Tabla</a></h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="Courses.html">
+										<img src="img/4.jpg" alt="img05" />
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h3><a href="Courses.html">Violin</a></h3>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="text-center" style="margin-top: 50px; font-size: 16px;">
+					<span><a href="shows.html" style="color: #708acc; text-decoration: none; font-weight: bold;">See all
+							courses</a></span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="feature_home">
+		<div class="container">
+			<div class="row">
+				<div class="events_home text-center clearfix">
+					<h1>Watch Now</h1>
+					<hr>
+				</div>
+				<div class="events_home_1 clearfix">
+					<iframe width="100%" height="616" src="https://www.youtube.com/embed/3rpL_27EnTM"
+						title="Vocal Practice Session at Kalakunja Sangeet Pathsala" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section id="events_home">
+		<div class="container">
+			<div class="row">
+				<div class="events_home text-center clearfix">
+					<h1>SPECIAL COURSES</h1>
+					<hr>
+				</div>
+				<div class="events_home_1 clearfix">
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-sadie">
+									<img src="img/school harmony.png" alt="img02" />
+									<figcaption>
+										<a href="specialCourses.html">View more</a>
+									</figcaption>
+								</figure>
+
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h3><a href="specialCourses.html">School Harmony</a></h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-sadie">
+									<img src="img/virtual training.png" alt="img02" />
+									<figcaption>
+										<a href="specialCourses.html">View more</a>
+									</figcaption>
+								</figure>
+
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h3><a href="specialCourses.html">Virtual Training</a></h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-sadie">
+									<img src="img/private class.png" alt="img02" />
+									<figcaption>
+										<a href="specialCourses.html">View more</a>
+									</figcaption>
+								</figure>
+
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h3><a href="specialCourses.html">Private Class</a></h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="feature_home">
+		<div class="container">
+			<div class="row">
+				<div class="events_home text-center clearfix">
+					<h1>OUR TEACHERS</h1>
+					<hr>
+				</div>
+				<div class="events_home_1 clearfix">
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="about.html">
+										<img src="img/teachers/77.jpeg" alt="img05" />
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h3><a href="about.html"> Arjun Basnyat ( Nishant ) - Guitar / Drum
+									</a></h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="about.html">
+										<img src="img/teachers/78.jpeg" alt="img05" />
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h3><a href="about.html">Gautam Shrestha - Tabala
+									</a></h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="about.html">
+										<img src="img/27.jpg" alt="img05" />
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h3><a href="about.html">- Vocal
+									</a></h3>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="google-reviews" style="padding-top: 60px; background-color: #242a37; padding-bottom: 60px;">
+		<div class="container">
+			<div class="row">
+				<div style="display: flex; justify-content: center; padding: 40px;">
+					<h2 style="color: white;">Our Student reviews</h2>
+				</div>
+				<div id="reviews" style="display: flex; overflow: hidden; width: 100%; position: relative;">
+					<div id="review-cards"
+						style="display: flex; transition: transform 1s ease-in-out; width: max-content;">
+						<!-- Review card 1 -->
+						<div class="review-card"
+							style="background-color: white; color: #333; margin-right: 20px; padding: 20px; width: 300px; height: auto; border-radius: 8px; flex-shrink: 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+							<div class="review-header"
+								style="display: flex; justify-content: space-between; align-items: center;">
+								<h4 style="font-size: 18px; color: #333;">Dipika Senapati</h4>
+								<div class="stars" style="color: #f4b400;">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+							</div>
+							<p style="font-size: 14px; color: #666; margin-top: 10px;">"The teacher's approach is
+								incredibly versatile. Instead of writing a lengthy response, let me share my personal
+								journey. Within just a month, I managed to learn my first song, and I'm still improving.
+								What's remarkable is how the teacher breaks down complex concepts into simple,
+								manageable steps. It's astonishing how quickly you can grasp intricate patterns under
+								his guidance."</p>
+						</div>
+
+						<!-- Review card 2 -->
+						<div class="review-card"
+							style="background-color: white; color: #333; margin-right: 20px; padding: 20px; width: 300px; height: auto; border-radius: 8px; flex-shrink: 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+							<div class="review-header"
+								style="display: flex; justify-content: space-between; align-items: center;">
+								<h4 style="font-size: 18px; color: #333;">Sumit Basnet</h4>
+								<div class="stars" style="color: #f4b400;">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+							</div>
+							<p style="font-size: 14px; color: #666; margin-top: 10px;">""Attending the guitar class was
+								an enriching experience! The instructor's passion for music shone through their patient
+								guidance, making learning enjoyable and rewarding. The curriculum was well-structured,
+								catering to beginners and seasoned players alike. The supportive environment fostered
+								growth, and the small class size ensured personalized attention. Overall, it's a highly
+								recommended class for anyone looking to embark on a musical journey or refine their
+								skills!""
+							</p>
+						</div>
+
+						<!-- Review card 3 -->
+						<div class="review-card"
+							style="background-color: white; color: #333; margin-right: 20px; padding: 20px; width: 300px; height: auto; border-radius: 8px; flex-shrink: 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+							<div class="review-header"
+								style="display: flex; justify-content: space-between; align-items: center;">
+								<h4 style="font-size: 18px; color: #333;">Sandesh Karki</h4>
+								<div class="stars" style="color: #f4b400;">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+							</div>
+							<p style="font-size: 14px; color: #666; margin-top: 10px;">""I recently completed the
+								beginner guitar class, and I couldn't be happier with my experience! The instructor was
+								incredibly knowledgeable and patient, making complex techniques easy to understand. The
+								lessons were well-structured and progressed at a perfect pace, allowing me to build my
+								skills and confidence gradually. I appreciated the blend of theory and practical
+								exercises, as well as the opportunity to play along with various songs. Overall, this
+								class was a fantastic introduction to the guitar, and I highly recommend it to anyone
+								looking to start their musical journey!""</p>
+						</div>
+
+						<!-- Review card 3 -->
+						<div class="review-card"
+							style="background-color: white; color: #333; margin-right: 20px; padding: 20px; width: 300px; height: auto; border-radius: 8px; flex-shrink: 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+							<div class="review-header"
+								style="display: flex; justify-content: space-between; align-items: center;">
+								<h4 style="font-size: 18px; color: #333;">Aalok Sah</h4>
+								<div class="stars" style="color: #f4b400;">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+							</div>
+							<p style="font-size: 14px; color: #666; margin-top: 10px;">"In vocal class,we focused on
+								breath control,pitch,and vocal range...
+								In guitar class we cover basic technique,chords, chords progression,and skills, we know
+								how to hold the guitar properly, finger placement and strumming pattern"</p>
+						</div>
+
+						<!-- Review card 3 -->
+						<div class="review-card"
+							style="background-color: white; color: #333; margin-right: 20px; padding: 20px; width: 300px; height: auto; border-radius: 8px; flex-shrink: 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+							<div class="review-header"
+								style="display: flex; justify-content: space-between; align-items: center;">
+								<h4 style="font-size: 18px; color: #333;">Sugam</h4>
+								<div class="stars" style="color: #f4b400;">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+							</div>
+							<p style="font-size: 14px; color: #666; margin-top: 10px;">"Great place to start a musical
+								journey with Kalakunja Music Academy. They are extremely knowledgeable and offer a wide
+								range of services. From vocals to different instruments they’ve got it all. Really glad
+								to be a part of such a great institution. 🙏"</p>
+						</div>
+
+						<!-- Review card 3 -->
+						<div class="review-card"
+							style="background-color: white; color: #333; margin-right: 20px; padding: 20px; width: 300px; height: auto; border-radius: 8px; flex-shrink: 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+							<div class="review-header"
+								style="display: flex; justify-content: space-between; align-items: center;">
+								<h4 style="font-size: 18px; color: #333;">Omprakash Pudasaini</h4>
+								<div class="stars" style="color: #f4b400;">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+							</div>
+							<p style="font-size: 14px; color: #666; margin-top: 10px;">"Kalakunja Music academy is one
+								of the best music school in town. After several hunts, finally i joined here initially
+								for Harmonium learning, now practicing vocal as well. I joined here at age 50 due to my
+								passion on music. A multi talented GURU who not only teaches SARAGAM but also play
+								various musical Instruments as well. He has dedicated whole life in music with
+								International Recognition from Grinnich book of World Record for extra ordinary
+								performance. I am really pleased to have him on my musical journey....JAY HOSH."</p>
+						</div>
+
+						<!-- Additional review cards... -->
+					</div>
+				</div>
+
+				<!-- Buttons for Write a Review and View All Reviews -->
+				<div class="review-buttons text-center">
+					<a href="https://www.google.com/maps/place/?q=place_id:ChIJs0assRsZ6zkRCruKh_xC_IE" target="_blank"
+						class="view-all-reviews" style="color: #fff; text-decoration: none; font-size: 16px;">View All
+						Reviews</a>
+					<br />
+					<br />
+					<span>
+						<a href="https://search.google.com/local/writereview?placeid=ChIJs0assRsZ6zkRCruKh_xC_IE"
+							target="_blank" class="btn btn-primary"
+							style="padding: 10px 20px; background-color: #f4b400; color: white; border-radius: 5px;">Write
+							a Review</a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script>
+		window.onload = () => {
+			// Set an initial transform value
+			let currentIndex = 0;
+			const reviewCards = document.getElementById('review-cards');
+			const totalCards = document.querySelectorAll('.review-card').length;
+
+			// Delay the animation until after page load to avoid flicker
+			setTimeout(() => {
+				reviewCards.style.transition = 'transform 1s ease-in-out'; // Reapply transition after page load
+				setInterval(() => {
+					if (currentIndex < totalCards - 1) {
+						currentIndex++;
+					} else {
+						currentIndex = 0;
+					}
+					reviewCards.style.transform = `translateX(-${currentIndex * 240}px)`; // 240px includes card width and margin
+				}, 3000); // 3 seconds interval
+			}, 100); // Small delay to let the page load completely
+		};
+	</script>
+
+
+
+
+
+
+	<section id="feature_home">
+		<div class="container">
+			<div class="row">
+				<div class="events_home text-center clearfix">
+					<h1>OUR GALLERY</h1>
+					<hr>
+				</div>
+
+				<div style="display: flex; flex-direction: row; justify-content: center; gap: 10px; padding: 20px;">
+					<div class="gallery_home_inner clearfix">
+						<img class="img-responsive" src="img/gallery/1.png">
+					</div>
+
+
+					<div class="maindiv">
+						<div class="col-sm-8" style="display: flex; flex-direction: row; padding: 0px; margin: 0px;">
+							<div class="">
+								<div class="gallery_home_inner clearfix">
+									<img class="img-responsive" src="img/gallery/2.png">
+								</div>
+							</div>
+							<div class="">
+								<div class="gallery_home_inner clearfix">
+									<img class="img-responsive" src="img/gallery/3.png">
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-8" style="display: flex; flex-direction: row; padding: 0px; margin: 0px;">
+							<div class="">
+								<div class="gallery_home_inner clearfix">
+									<img class="img-responsive" src="img/gallery/4.png">
+								</div>
+							</div>
+							<div class="">
+								<div class="gallery_home_inner clearfix">
+									<img class="img-responsive" src="img/gallery/5.png">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div id="footer">
+		<div id="footer-container"></div>
+	</div>
+
+
+	<script src="js/classie.js"></script>
+	<script src="js/cbpAnimatedHeader.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Load header
+			fetch("header.html")
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById("header-container").innerHTML = data;
+
+					// Add active class based on current page URL
+					const currentUrl = window.location.pathname;
+
+					// Debugging: Log current path
+					console.log("Current Path:", currentUrl);
+
+					const navLinks = {
+						'/index.html': 'nav-home',
+						'/about.html': 'nav-guru',
+						'/shows.html': 'nav-courses',
+						'/contact.html': 'nav-contact'
+					};
+
+					// Find and set active link
+					for (const [path, id] of Object.entries(navLinks)) {
+						if (currentUrl.includes(path) || (currentUrl === '/' && path === '/index.html')) {
+							document.getElementById(id).querySelector('a').classList.add('active_tab');
+						}
+					}
+				})
+				.catch(error => console.error('Error loading header:', error));
+
+			// Load footer
+			fetch("footer.html")
+				.then(response => response.text())
+				.then(data => document.getElementById("footer-container").innerHTML = data)
+				.catch(error => console.error('Error loading footer:', error));
+		});
+	</script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			let currentlyPlayingAudio = null;  // To keep track of the currently playing audio
+			let currentlyPlayingIcon = null;   // To keep track of the currently playing icon
+
+			// Function to handle audio play/pause and icon change
+			function handleAudioPlayPause(audioId, progressId, iconId) {
+				const audioElement = document.getElementById(audioId);
+				const progressBar = document.getElementById(progressId);
+				const iconElement = document.getElementById(iconId).querySelector('i'); // The icon inside the div
+
+				// Pause any currently playing audio
+				if (currentlyPlayingAudio && currentlyPlayingAudio !== audioElement) {
+					currentlyPlayingAudio.pause();
+					currentlyPlayingAudio.currentTime = 0;  // Reset audio
+					currentlyPlayingIcon.classList.remove('fa-pause-circle');
+					currentlyPlayingIcon.classList.add('fa-play-circle');
+				}
+
+				// Play or pause the current audio
+				if (audioElement.paused) {
+					audioElement.play();
+					iconElement.classList.remove('fa-play-circle');
+					iconElement.classList.add('fa-pause-circle');
+
+					// Track the current audio and icon as playing
+					currentlyPlayingAudio = audioElement;
+					currentlyPlayingIcon = iconElement;
+				} else {
+					audioElement.pause();
+					iconElement.classList.remove('fa-pause-circle');
+					iconElement.classList.add('fa-play-circle');
+				}
+
+				// Update the progress bar as the audio plays
+				audioElement.addEventListener("timeupdate", function () {
+					const percentage = (audioElement.currentTime / audioElement.duration) * 100;
+					progressBar.style.width = percentage + "%";
+				});
+
+				// Reset the progress bar and icon when the audio ends
+				audioElement.addEventListener("ended", function () {
+					progressBar.style.width = "0%";
+					iconElement.classList.remove('fa-pause-circle');
+					iconElement.classList.add('fa-play-circle');
+				});
+			}
+
+			// Add event listeners for each icon
+			document.getElementById("guitar-icon").addEventListener("click", function () {
+				handleAudioPlayPause("guitar-audio", "guitar-progress", "guitar-icon");
+			});
+
+			document.getElementById("vocal-icon").addEventListener("click", function () {
+				handleAudioPlayPause("vocal-audio", "vocal-progress", "vocal-icon");
+			});
+
+			document.getElementById("violin-icon").addEventListener("click", function () {
+				handleAudioPlayPause("violin-audio", "violin-progress", "violin-icon");
+			});
+
+			document.getElementById("tabala-icon").addEventListener("click", function () {
+				handleAudioPlayPause("tabala-audio", "tabala-progress", "tabala-icon");
+			});
+
+			document.getElementById("piano-icon").addEventListener("click", function () {
+				handleAudioPlayPause("piano-audio", "piano-progress", "piano-icon");
+			});
+
+			document.getElementById("drum-icon").addEventListener("click", function () {
+				handleAudioPlayPause("drum-audio", "drum-progress", "drum-icon");
+			});
+
+			document.getElementById("flute-icon").addEventListener("click", function () {
+				handleAudioPlayPause("flute-audio", "flute-progress", "flute-icon");
+			});
+
+			document.getElementById("sarangi-icon").addEventListener("click", function () {
+				handleAudioPlayPause("sarangi-audio", "sarangi-progress", "sarangi-icon");
+			});
+
+			document.getElementById("madal-icon").addEventListener("click", function () {
+				handleAudioPlayPause("madal-audio", "madal-progress", "madal-icon");
+			});
+
+			document.getElementById("harmonium-icon").addEventListener("click", function () {
+				handleAudioPlayPause("harmonium-audio", "harmonium-progress", "harmonium-icon");
+			});
+
+			// Event listener to detect clicks outside the icon-grid and stop audio
+			document.addEventListener("click", function (event) {
+				const iconGrid = document.querySelector('.icon-grid');
+				if (!iconGrid.contains(event.target)) {
+					if (currentlyPlayingAudio) {
+						currentlyPlayingAudio.pause();
+						currentlyPlayingAudio.currentTime = 0;  // Reset audio
+						currentlyPlayingIcon.classList.remove('fa-pause-circle');
+						currentlyPlayingIcon.classList.add('fa-play-circle');
+					}
+				}
+			});
+		});
+	</script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

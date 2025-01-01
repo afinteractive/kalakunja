@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Courses Details - Kalakunj Music Academy</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="img/Kalakunj_Logo.png">
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link href="css/element.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet">
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+
+<!-- Embedded CSS for mobile responsiveness and WhatsApp button styling -->
+<style>
+	#about_top_contact {
+		margin-top: 40px;
+		padding: 0px;
+	}
+
+	p {
+		font-size: 18px;
+		color: #adacac;
+	}
+
+	/* Default styling for larger screens */
+	.navbar-brand {
+		font-size: 24px;
+	}
+
+	.brand-line-1,
+	.brand-line-2 {
+		display: inline;
+	}
+
+	/* Responsive styling for smaller screens */
+	@media (max-width: 767px) {
+		.navbar-brand {
+			font-size: 18px;
+		}
+
+		.brand-line-1,
+		.brand-line-2 {
+			display: block;
+			text-align: center;
+		}
+
+		.brand-line-1 {
+			margin-bottom: -5px;
+		}
+
+		/* Add space between KALAKUNJ and MUSIC ACADEMY */
+		.brand-line-2 {
+			margin-top: 10px;
+		}
+	}
+
+	/* WhatsApp floating button */
+	.whatsapp-float {
+		position: fixed;
+		width: 60px;
+		height: 60px;
+		bottom: 20px;
+		left: 20px;
+		background-color: #25D366;
+		color: #FFF;
+		border-radius: 50px;
+		text-align: center;
+		font-size: 30px;
+		box-shadow: 2px 2px 3px #999;
+		z-index: 1000;
+	}
+
+	.whatsapp-float .my-float {
+		margin-top: 16px;
+	}
+
+
+	.courseDiv {
+		padding: 30px;
+	}
+
+	h3 {
+		padding-bottom: 10px;
+	}
+
+	section {
+		position: relative;
+		padding-bottom: 40px;
+		/* Adds space for the neon effect */
+	}
+
+	section:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		/* Adjust the height of the neon line */
+		background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+		/* Neon colors */
+		box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+		animation: neon 1.5s ease-in-out infinite alternate;
+	}
+
+	/* Neon glow animation */
+	@keyframes neon {
+		0% {
+			opacity: 0.8;
+			box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+		}
+
+		100% {
+			opacity: 1;
+			box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, 0 0 60px #ff00ff;
+		}
+	}
+</style>
+
+<body>
+	<section id="header" class="about_header">
+		<div id="header-container"></div>
+	</section>
+
+	<section id="about_top_contact">
+		<div class="main_content">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="about_top">
+							<h1>Courses</h1>
+							<h4>Unlock Your Musical Talent with Comprehensive Courses Tailored for Every Instrument and
+								Style
+							</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="events_home" class="events_page">
+		<div class="container">
+			<div class="row">
+				<div class="courseDiv">
+					<h3 style="color: white;"> Vocal (Classical, Modern, Folk, Ghazals)</h3>
+					<p>
+						Our vocal course is designed to cater to diverse musical preferences and skill levels. Whether
+						you are interested in the intricacies of classical music, the versatility and innovation of
+						modern genres, the rich cultural heritage of folk music, or the soulful expression of ghazals,
+						our experienced instructors will guide you every step of the way. With a focus on voice
+						training, breathing techniques, and performance, we help students develop their unique vocal
+						style while mastering both traditional and contemporary forms of singing.
+					</p>
+				</div>
+				<div class="courseDiv">
+					<h3 style="color: white;">Tabla (Classical, Light including Madal, Naal, Dholak, Mridangam) </h3>
+					<p>
+						The tabla course offers an in-depth exploration of Indian percussion, blending traditional and
+						modern styles. Students will start by learning the fundamentals of rhythm and hand techniques,
+						progressing to complex compositions and improvisations. The course also includes lessons on
+						related instruments such as the Madal, Naal, Dholak, and Mridangam, giving students a
+						comprehensive understanding of the different rhythms in classical and light music. Whether
+						you're a beginner or an advanced player, you will gain a strong command of rhythmic cycles and
+						improvisational skills.
+					</p>
+				</div>
+				<div class="courseDiv">
+					<h3 style="color: white;"> Violin (Classical, Eastern, and Western)
+					</h3>
+					<p>
+						Our violin course offers a balanced focus on classical, Eastern, and Western music traditions,
+						making it perfect for students looking to expand their versatility as a violinist. Students will
+						learn proper posture, bowing techniques, and finger positioning, ensuring a strong technical
+						foundation. Whether you want to perform classical pieces, engage with Eastern traditions, or
+						explore Western orchestral and contemporary music, our instructors will tailor the lessons to
+						suit your goals, helping you develop as a well-rounded violinist.
+
+					</p>
+				</div>
+
+				<div class="courseDiv">
+					<h3 style="color: white;"> Guitar (Classical, Eastern, Western, Jazz, Metal, Blues, Pop, Reggae)
+					</h3>
+					<p>
+						The guitar course covers a broad range of genres, offering something for every aspiring
+						guitarist. Whether you're drawn to the timeless elegance of classical guitar, the intricate
+						scales of Eastern music, or the expressive energy of Western styles like jazz, rock, and metal,
+						our curriculum is designed to challenge and inspire. You’ll explore techniques such as
+						fingerstyle, power chords, and soloing, while diving deep into genre-specific elements like jazz
+						improvisation, blues phrasing, and metal shredding. Our goal is to help you master the guitar
+						and find your voice in any style you choose to pursue.
+
+					</p>
+				</div>
+				<div class="courseDiv">
+					<h3 style="color: white;"> Piano/Keyboard
+					</h3>
+					<p>
+						In our piano and keyboard course, students will learn everything from basic music theory and
+						finger techniques to advanced compositions and improvisations. The course covers classical
+						repertoire, contemporary pop songs, and even electronic music production, depending on the
+						student’s interests. With a focus on both performance and musical interpretation, this course
+						will help you build strong technical skills while encouraging creative expression. Whether
+						you're preparing for a recital or just playing for fun, you'll develop a strong foundation in
+						keyboard instruments.
+
+					</p>
+				</div>
+				<div class="courseDiv">
+					<h3 style="color: white;"> Drums/Congo
+					</h3>
+					<p>
+						Our drums and congo course is designed for those who want to explore the world of percussion.
+						The course covers fundamental techniques such as stick control, coordination, and rhythm
+						reading, as well as more advanced patterns, fills, and solos. You will also learn different
+						drumming styles across various genres like rock, jazz, and Latin music. The hands-on approach
+						ensures that you develop a solid sense of rhythm and timing, essential for both solo
+						performances and group settings. Whether you aim to play in a band or simply enjoy the power of
+						rhythm, this course has something for every level.
+
+
+					</p>
+				</div>
+				<div class="courseDiv">
+					<h3 style="color: white;"> Harmonium, Flute, Sarangi
+					</h3>
+					<p>
+						Our harmonium, flute, and sarangi course dives deep into the rich tradition of Indian classical
+						music while also introducing students to contemporary applications of these instruments. You’ll
+						start by learning proper fingering and breath control (for flute), and progress to more advanced
+						ragas and compositions. Whether your interest lies in solo performance or accompanying other
+						musicians, this course provides a holistic understanding of each instrument. Our instructors
+						will guide you through techniques that enhance tone, phrasing, and expression, making these
+						traditional instruments come alive in your hands.
+
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+
+	<div id="footer">
+		<div id="footer-container"></div>
+	</div>
+
+
+
+	<script src="js/classie.js"></script>
+	<script src="js/cbpAnimatedHeader.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Load header
+			fetch("header.html")
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById("header-container").innerHTML = data;
+
+					// Add active class based on current page URL
+					const currentUrl = window.location.pathname;
+
+					// Debugging: Log current path
+					console.log("Current Path:", currentUrl);
+
+					const navLinks = {
+						'/index.html': 'nav-home',
+						'/about.html': 'nav-guru',
+						'/shows.html': 'nav-courses',
+						'/contact.html': 'nav-contact'
+					};
+
+					// Find and set active link
+					for (const [path, id] of Object.entries(navLinks)) {
+						if (currentUrl.includes(path) || (currentUrl === '/' && path === '/index.html')) {
+							document.getElementById(id).querySelector('a').classList.add('active_tab');
+						}
+					}
+				})
+				.catch(error => console.error('Error loading header:', error));
+
+			// Load footer
+			fetch("footer.html")
+				.then(response => response.text())
+				.then(data => document.getElementById("footer-container").innerHTML = data)
+				.catch(error => console.error('Error loading footer:', error));
+		});
+	</script>
+</body>
+
+</html>

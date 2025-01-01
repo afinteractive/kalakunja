@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Courses - Kalakunj Music Academy</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="img/Kalakunj_Logo.png">
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link href="css/element.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet">
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+
+<!-- Embedded CSS for mobile responsiveness and WhatsApp button styling -->
+<style>
+	#about_top_shows {
+		margin-top: 50px;
+		padding: 0px;
+	}
+
+
+	@media (max-width: 768px) {
+		#about_top_shows {
+			margin-top: 0px;
+		}
+
+	}
+
+
+
+	/* Default styling for larger screens */
+	.navbar-brand {
+		font-size: 24px;
+	}
+
+	.brand-line-1,
+	.brand-line-2 {
+		display: inline;
+	}
+
+	/* Responsive styling for smaller screens */
+	@media (max-width: 767px) {
+		.navbar-brand {
+			font-size: 18px;
+		}
+
+		.brand-line-1,
+		.brand-line-2 {
+			display: block;
+			text-align: center;
+		}
+
+		.brand-line-1 {
+			margin-bottom: -5px;
+		}
+
+		/* Add space between KALAKUNJ and MUSIC ACADEMY */
+		.brand-line-2 {
+			margin-top: 10px;
+		}
+	}
+
+	/* WhatsApp floating button */
+	.whatsapp-float {
+		position: fixed;
+		width: 60px;
+		height: 60px;
+		bottom: 20px;
+		left: 20px;
+		background-color: #25D366;
+		color: #FFF;
+		border-radius: 50px;
+		text-align: center;
+		font-size: 30px;
+		box-shadow: 2px 2px 3px #999;
+		z-index: 1000;
+	}
+
+	.whatsapp-float .my-float {
+		margin-top: 16px;
+	}
+
+	.events_home_1_inner_text {
+		display: flex;
+		justify-content: center;
+		width: 300px;
+	}
+
+	@media (max-width: 992px) {
+		.events_home_1_inner_text {
+			display: flex;
+			justify-content: start;
+			width: 300px;
+		}
+
+		.cardDiv {
+			width: 50%;
+		}
+
+	}
+
+	@media (max-width: 768px) {
+		.cardDiv {
+			display: flex;
+			justify-content: center;
+			width: auto;
+		}
+
+		.events_home_1_inner_text {
+			display: flex;
+			justify-content: center;
+			width: auto;
+
+		}
+
+		.about_top_shows {
+			margin-top: 0px;
+			padding-top: 0px;
+		}
+	}
+
+
+	section {
+		position: relative;
+		padding-bottom: 40px;
+		/* Adds space for the neon effect */
+	}
+
+	section:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		/* Adjust the height of the neon line */
+		background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+		/* Neon colors */
+		box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+		animation: neon 1.5s ease-in-out infinite alternate;
+	}
+
+	/* Neon glow animation */
+	@keyframes neon {
+		0% {
+			opacity: 0.8;
+			box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+		}
+
+		100% {
+			opacity: 1;
+			box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, 0 0 60px #ff00ff;
+		}
+	}
+</style>
+
+<body>
+	<section id="header" class="about_header">
+		<div id="header-container"></div>
+	</section>
+
+	<section id="about_top_shows">
+		<div class="main_content">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="about_top">
+							<h1>COURSES</h1>
+							<h4>Our popular courses</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="events_home" class="events_page">
+		<div class="container">
+			<div class="row">
+				<div class="events_home_1 clearfix shows_page">
+					<div class="cardDiv col-sm-4 space_left" style="margin-bottom: 20px;">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="Courses.html">
+										<img src="img/2.jpg" alt="img05">
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h4><a href="Courses.html">Vocal</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="cardDiv col-sm-4 space_left" style="margin-bottom: 20px;">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="Courses.html">
+										<img src="img/3.jpg" alt="img05">
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h4><a href="Courses.html">Tabla</a>
+								</h4>
+							</div>
+						</div>
+					</div>
+					<div class="cardDiv col-sm-4 space_left" style="margin-bottom: 20px;">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="Courses.html">
+										<img src="img/4.jpg" alt="img05">
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h4><a href="Courses.html">Violin</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="cardDiv col-sm-4 space_left" style="margin-bottom: 20px;">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="Courses.html">
+										<img src="img/21.jpg" alt="img05">
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h4><a href="Courses.html">Guitar
+									</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="cardDiv col-sm-4 space_left" style="margin-bottom: 20px;">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="Courses.html">
+										<img src="img/22.jpg" alt="img05">
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h4><a href="Courses.html">Piano/Keyboard </a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="cardDiv col-sm-4 space_left" style="margin-bottom: 20px;">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="Courses.html">
+										<img src="img/23.jpg" alt="img05">
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h4><a href="Courses.html">Drums/Congo</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="cardDiv col-sm-4 space_left" style="margin-bottom: 20px;">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="Courses.html">
+										<img src="img/24.jpg" alt="img05">
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h4><a href="Courses.html">Harmonium, Flute, Sarangi
+									</a></h4>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<div id="footer">
+		<div id="footer-container"></div>
+	</div>
+
+
+
+	<script src="js/classie.js"></script>
+	<script src="js/cbpAnimatedHeader.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Load header
+			fetch("header.html")
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById("header-container").innerHTML = data;
+
+					// Add active class based on current page URL
+					const currentUrl = window.location.pathname;
+
+					// Debugging: Log current path
+					console.log("Current Path:", currentUrl);
+
+					const navLinks = {
+						'/index.html': 'nav-home',
+						'/about.html': 'nav-guru',
+						'/shows.html': 'nav-courses',
+						'/contact.html': 'nav-contact'
+					};
+
+					// Find and set active link
+					for (const [path, id] of Object.entries(navLinks)) {
+						if (currentUrl.includes(path) || (currentUrl === '/' && path === '/index.html')) {
+							document.getElementById(id).querySelector('a').classList.add('active_tab');
+						}
+					}
+				})
+				.catch(error => console.error('Error loading header:', error));
+
+			// Load footer
+			fetch("footer.html")
+				.then(response => response.text())
+				.then(data => document.getElementById("footer-container").innerHTML = data)
+				.catch(error => console.error('Error loading footer:', error));
+		});
+	</script>
+</body>
+
+</html>

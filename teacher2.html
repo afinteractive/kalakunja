@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Teacher - Kalakunj Music Academy</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="img/Kalakunj_Logo.png">
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link href="css/element.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet">
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+
+<!-- Embedded CSS for mobile responsiveness and WhatsApp button styling -->
+<style>
+	p {
+		font-size: 18px;
+		color: #adacac;
+		margin-top: 40px;
+	}
+
+
+	#about_top_about {
+		margin-top: 112px;
+	}
+
+
+	@media (max-width: 768px) {
+		#about_top_about {
+			margin-top: 0px;
+		}
+
+	}
+
+	@media (max-width: 768px) {
+		p {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+
+		.about_middle {
+			padding-left: 25px;
+			padding-right: 25px;
+
+		}
+
+	}
+
+	/* Default styling for larger screens */
+	.navbar-brand {
+		font-size: 24px;
+	}
+
+	.brand-line-1,
+	.brand-line-2 {
+		display: inline;
+	}
+
+	/* Responsive styling for smaller screens */
+	@media (max-width: 767px) {
+		.navbar-brand {
+			font-size: 18px;
+		}
+
+		.brand-line-1,
+		.brand-line-2 {
+			display: block;
+			text-align: center;
+		}
+
+		.brand-line-1 {
+			margin-bottom: -5px;
+		}
+
+		/* Add space between KALAKUNJ and MUSIC ACADEMY */
+		.brand-line-2 {
+			margin-top: 10px;
+		}
+	}
+
+	/* WhatsApp floating button */
+	.whatsapp-float {
+		position: fixed;
+		width: 60px;
+		height: 60px;
+		bottom: 20px;
+		left: 20px;
+		background-color: #25D366;
+		color: #FFF;
+		border-radius: 50px;
+		text-align: center;
+		font-size: 30px;
+		box-shadow: 2px 2px 3px #999;
+		z-index: 1000;
+	}
+
+	.whatsapp-float .my-float {
+		margin-top: 16px;
+	}
+</style>
+
+
+<style>
+	#center {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		padding-top: 180px;
+		padding-bottom: 250px;
+		height: 800px;
+	}
+
+	@media (max-width: 1322) {
+		#center {
+			height: 1300px;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		#center {
+			height: 1000px;
+		}
+	}
+
+
+	@media (max-width: 768px) {
+		#center {
+			height: 1000px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		#center {
+			height: 1150px;
+			padding-top: 50px;
+		}
+	}
+
+	.main {
+		width: 100%;
+		padding: 0 40px;
+		/* Increase padding on the sides */
+	}
+
+	/* Base layout for desktop */
+	.icon-grid {
+		margin-top: 40px;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 20px;
+		/* Reduced gap between icon items */
+		justify-content: center;
+		padding: 0 210px;
+		/* Add padding to the grid for spacing on the sides */
+	}
+
+	/* Adjust layout for tablets (max-width: 768px) */
+	@media (max-width: 1000px) {
+		.icon-grid {
+			grid-template-columns: repeat(3, 1fr);
+			padding: 0 20px;
+
+		}
+	}
+
+	/* Adjust layout for mobile (max-width: 480px) */
+	@media (max-width: 570px) {
+		.icon-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	/* Ensure the icon items maintain consistent styling */
+	.icon-item {
+		color: #a4b4dc;
+		background-color: rgb(34, 33, 43);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: auto;
+		min-width: 150px;
+		/* Adjusted to fill full width */
+		height: 50px;
+		font-size: 18px;
+		text-align: center;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		animation: gentle-glow 2s infinite ease-in-out;
+		padding: 10px;
+		border-radius: 10px;
+	}
+
+	@media (max-width: 730px) {
+		.icon-item {
+			width: 150px;
+		}
+	}
+
+	/* Adjust layout for mobile (max-width: 480px) */
+	@media (max-width: 480px) {
+		.icon-item {
+			width: 130px;
+
+		}
+	}
+
+	/* Adjust the margin for icons to create proper spacing between icon and text */
+	.icon-item i {
+		margin-right: 10px;
+		/* Adjust the gap between icon and text */
+		font-size: 20px;
+		/* Ensure the icon size is consistent */
+		color: #a4b4dc;
+		/* Keep the icon color the same */
+	}
+
+	/* Add a transition effect to smooth out hover effects */
+	.icon-item:hover {
+		box-shadow: 0 0 15px #a4b4dc, 0 0 30px #a4b4dc;
+	}
+
+
+	/* WhatsApp floating button */
+	.whatsapp-float {
+		position: fixed;
+		width: 60px;
+		height: 60px;
+		bottom: 20px;
+		left: 20px;
+		background-color: #25D366;
+		color: #FFF;
+		border-radius: 50px;
+		text-align: center;
+		font-size: 30px;
+		box-shadow: 2px 2px 3px #999;
+		z-index: 1000;
+	}
+
+	.whatsapp-float .my-float {
+		margin-top: 16px;
+	}
+
+	/* Gentle glowing effect for icon and text */
+	@keyframes gentle-glow {
+		0% {
+			box-shadow: 0 0 5px #a4b4dc, 0 0 10px #a4b4dc;
+		}
+
+		50% {
+			box-shadow: 0 0 10px #a4b4dc, 0 0 15px #a4b4dc;
+		}
+
+		100% {
+			box-shadow: 0 0 5px #a4b4dc, 0 0 10px #a4b4dc;
+		}
+	}
+
+
+
+	.text {
+		font-size: 18px;
+		color: #adacac;
+		margin-top: 15px;
+
+	}
+
+
+	/* Icon item styling with hover and click animations */
+	.icon-item {
+		cursor: pointer;
+		position: relative;
+		padding-bottom: 10px;
+		transition: transform 0.2s ease-in-out;
+		background-color: rgb(34, 33, 43);
+		color: #a4b4dc;
+		padding: 20px;
+		border-radius: 10px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	/* Hover effect on icon-item */
+	.icon-item:hover {
+		transform: scale(1.1);
+		/* Slightly enlarge the icon */
+	}
+
+	/* Click effect animation on icon-item */
+	.icon-item:active {
+		transform: scale(0.95);
+		/* Shrink slightly when clicked */
+	}
+
+	/* Progress bar styling */
+	.progress-bar {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 5px;
+		width: 0;
+		/* Initially set to 0 */
+		background-color: #4caf50;
+		/* Green progress color */
+		transition: width 0.1s ease;
+	}
+
+	.events_home_10 {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+	}
+
+
+	@media (max-width: 1024px) {
+		.events_home_10 {
+			display: flex;
+			flex-direction: column;
+			padding: 30px;
+		}
+
+		.events_home_10_inner {
+			display: flex;
+			justify-content: center;
+		}
+	}
+</style>
+
+<body>
+	<section id="header" class="about_header">
+		<div id="header-container"></div>
+	</section>
+
+	<section id="">
+		<div class="main_content">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="about_top"  style="padding: 40px;">
+							<h1>Guru</h1>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="team_home">
+		<div class="container">
+			<div class="row">
+				<div class="events_home text-center clearfix">
+					<h1>GURU</h1>
+					<hr>
+				</div>
+				<div class="events_home_10 clearfix">
+					<div class="">
+						<div class="events_home_10_inner clearfix">
+							<div class="grid clearfix">
+								
+							</div>
+						</div>
+					</div>
+					<div class="">
+						
+						<div class="text-right" style="margin-top: 50px; font-size: 16px;">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+
+
+
+	<section id="footer">
+		<div id="footer-container"></div>
+	</section>
+
+
+
+
+
+	<script src="js/classie.js"></script>
+	<script src="js/cbpAnimatedHeader.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Load header
+			fetch("header.html")
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById("header-container").innerHTML = data;
+
+					// Add active class based on current page URL
+					const currentUrl = window.location.pathname;
+
+					// Debugging: Log current path
+					console.log("Current Path:", currentUrl);
+
+					const navLinks = {
+						'/index.html': 'nav-home',
+						'/about.html': 'nav-guru',
+						'/shows.html': 'nav-courses',
+						'/contact.html': 'nav-contact'
+					};
+
+					// Find and set active link
+					for (const [path, id] of Object.entries(navLinks)) {
+						if (currentUrl.includes(path) || (currentUrl === '/' && path === '/index.html')) {
+							document.getElementById(id).querySelector('a').classList.add('active_tab');
+						}
+					}
+				})
+				.catch(error => console.error('Error loading header:', error));
+
+			// Load footer
+			fetch("footer.html")
+				.then(response => response.text())
+				.then(data => document.getElementById("footer-container").innerHTML = data)
+				.catch(error => console.error('Error loading footer:', error));
+		});
+	</script>
+</body>
+
+</html>

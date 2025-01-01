@@ -1,0 +1,118 @@
+<!-- header.html -->
+<nav class="navbar navbar-default navbar-fixed-top navbar-neon">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navBar-main">
+                <div>
+                    <img style="height: 65px; margin-right: 10px;"  src="img/Kalakunja_Logo.png" alt="img05" />
+                </div>
+
+                <a class="navbar-brand" href="index.html" style="display: flex;">
+                    <div class="nameDiv">
+                        <span class="brand-line-1">KALAKUNJA</span>
+                        <div>
+                            MUSIC ACADEMY
+                        </div>
+                    </div>
+                    <img style="height: 18px;" src="img/Title.png" alt="img05" />
+                </a>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li id="nav-home"><a class="tag_menu" href="index.html">Home</a></li>
+                <li id="nav-guru"><a class="tag_menu" href="about.html">Guru</a></li>
+                <li id="nav-courses"><a class="tag_menu" href="shows.html">Courses</a></li>
+                <li id="nav-contact"><a class="tag_menu" href="contact.html">Contact Us</a></li>
+                <li>
+                    <a class="tag_menu" href="https://wa.me/+9779851084138" target="_blank" aria-label="WhatsApp"
+                        style="padding-top: 9px;">
+                        <!-- WhatsApp SVG icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30">
+                            <path fill="#25D366"
+                                d="M16 0c-8.837 0-16 7.163-16 16 0 2.826.739 5.59 2.143 8.031L0 32l8.117-2.088C10.472 31.26 13.187 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0z">
+                            </path>
+                            <path fill="#FFF"
+                                d="M24.967 22.253c-.347.974-1.707 1.804-2.426 1.919-.635.097-1.453.139-2.338-.148a13.962 13.962 0 0 1-2.526-1.003c-4.434-2.442-7.317-7.065-7.577-7.379-.26-.315-1.605-2.157-1.605-4.121 0-1.965 1.027-2.932 1.391-3.352.347-.383.91-.553 1.478-.553.176 0 .333.009.478.017.419.018.628.028.901.666.347.795 1.18 2.76 1.283 2.949.099.199.159.434.029.678-.129.243-.207.395-.41.622-.208.24-.43.474-.609.636-.2.189-.407.393-.174.73.207.346.876 1.426 1.88 2.306 1.296 1.15 2.39 1.509 2.759 1.683.369.175.586.149.806-.089.227-.25.957-.988 1.211-1.324.227-.309.485-.267.806-.16.322.108 2.037.956 2.392 1.129.346.175.572.266.66.413.099.159.099.819-.24 1.691z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Embedded CSS for mobile responsiveness and neon effect -->
+<style>
+    .nameDiv {
+        margin-bottom: 3px;
+    }
+
+    .navBar-main {
+        display: flex;
+        flex-direction: row;
+        gap: 18px;
+    }
+
+    .navbar-brand {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        margin-top: 5px;
+    }
+
+    /* Default styling for larger screens */
+    .navbar-brand {
+        font-size: 15px;
+    }
+
+    .brand-line-1,
+    .brand-line-2 {
+        display: inline;
+    }
+
+    /* Responsive styling for smaller screens */
+    @media (max-width: 767px) {
+        .navBar-main {
+            gap: 1px;
+        }
+
+        .nameDiv {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .navbar-brand {
+            font-size: 18px;
+            padding: 0px;
+        }
+
+        .brand-line-1,
+        .brand-line-2 {
+            display: block;
+            text-align: start;
+        }
+
+        .brand-line-1 {
+            margin-bottom: -5px;
+        }
+
+        /* Add space between KALAKUNJ and MUSIC ACADEMY */
+        .brand-line-2 {
+            margin-top: 10px;
+        }
+    }
+
+    /* Neon effect on the navbar */
+    .navbar-neon {
+        box-shadow: 0 8px 15px 0 rgba(255, 255, 255, 0.6);
+    }
+</style>
